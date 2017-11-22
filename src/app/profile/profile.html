@@ -1,0 +1,118 @@
+<style>
+    /* quick reset */
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    /* relevant styles */
+
+    .img__wrap {
+        position: relative;
+        height: 280px;
+        width: 357px;
+    }
+
+    .img__description {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 1.7em;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        visibility: hidden;
+
+        /* transition effect. not necessary */
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .description {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 5em;
+        color: #fff;
+    }
+
+    .img__wrap:hover .img__description {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+<div class="main-content animated fadeInRight" ng-controller="profileController as pfCtr">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+
+                    <div class="card-content">
+                        <h2 class="card-title" style="text-align:center"><b>Welcome to GBuddy!</b></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- /.col-lg-4 -->
+                    <div class="col-md-6 text-center">
+                        <div class="img__wrap">
+                            <img class="img__img" style="width:60%" src="assets/images/beauty.png" />
+                            <div class="img__description">
+                                <div class="description">
+                                    <p>You have spent</p>
+                                    <p style="margin-left:30px;">(est) on grooming this week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.col-lg-4 -->
+                    <div class="col-md-6 text-center">
+                        <div class="img__wrap">
+                            <img class="img__img" style="width:60%" src="assets/images/food.png" />
+                            <div class="img__description">
+                                    <div class="description">
+                                        <p>You have spent</p>
+                                        <p style="margin-left:12px;">(est) on restaurants this week</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-md-6 text-center">
+                            <div class="img__wrap">
+                                <img class="img__img" style="width:57%" src="assets/images/sport.png" />
+                                <div class="img__description">
+                                        <div class="description">
+                                            <p>You have spent</p>
+                                            <p style="margin-left:7px;">(est) on your hobbies this week</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <div class="col-md-4">
+                    <div class="card card-profile">
+                            <h2><b>Points earned:</b></h2>
+                        <div class="card-content">
+                                <p style="font-size:400%;color:red">14</p><br><br>
+                                <p style="font-size:150%">(30 points to recieve reward)
+                                </p>
+                                <hr style="border: 2;height: 1px;background: #333;">
+                                <br>
+                                <p style="font-size:150%"><b>You have saved </b></p><br><br>
+                                <p style="font-size:400%;color:red">32%</p><br>
+                                <p style="font-size:150%"><b>of your graduation costs!</b></p>
+                            
+                        </div>
+        
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+</div>

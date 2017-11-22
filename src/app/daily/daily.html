@@ -1,0 +1,61 @@
+<div class = "main-content animated fadeInRight" ng-controller = "profileController as pfCtr">
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 text-center">
+                        <div class="card">
+                                <h2 class="card-title"><b>Daily Assessment</b></h2>
+                        </div>
+
+                                    <div class="row">
+                                      <form>
+                                          <div class="col-md-6 text-center">
+                                              <img src="assets/images/beauty.png" alt="Generic placeholder image" style="width:60%">
+                                              <p style="font-size:150%">Did you spend on your personal grooming today?</p>
+                                              <p style="font-size:150%">	
+                                                <input type="radio" name="transport" value="Yes" required/> <img src="assets/images/yes.png" width="30">
+                                                <input type="radio" name="transport" value="No"required/> <img src="assets/images/no.png" width="25">
+                                              </p>
+                                            </div><!-- /.col-lg-4 -->
+                                          </form>
+                                        <form>
+
+                                            <div class="col-md-6 text-center">
+                                                <img src="assets/images/food.png" alt="Generic placeholder image" style="width:60%">
+                                                <p style="font-size:150%">Did you eat at a expensive restaurant/cafe today?</p>
+                                                <p style="font-size:150%">	
+                                                  <input type="radio" name="transport" value="Yes" required/> <img src="assets/images/yes.png" width="30">  
+                                                  <input type="radio" name="transport" value="No"required/> <img src="assets/images/no.png" width="25">
+                                                </p>
+                                              </div><!-- /.col-lg-4 -->
+                                            </form>
+                                          <form>
+                                              <div class="col-md-6 text-center">
+                                                  <img src="assets/images/sport.png" alt="Generic placeholder image" style="width:57%">
+                                                  <p style="font-size:150%">Did you spend on your hobby today?</p>
+                                                  <p style="font-size:150%">	
+                                                    <input type="radio" name="transport" value="Yes" required/> <img src="assets/images/yes.png" width="30">   
+                                                    <input type="radio" name="transport" value="No"required/> <img src="assets/images/no.png" width="25">
+                                                  </p>
+                                                </div><!-- /.col-lg-4 -->
+                                    
+                                  <div class="col-md-6 text-center">
+                                    <input style="width:100%;margin-top:70%" type="number" id="dailyBalance" class="form-control" placeholder="Today's Expenses" required>                                    
+
+                                    <button class="btn btn-rose pull-right" style="background-color:#2b2c2d" type="submit" ng-click="pfCtr.update()">submit</button>
+                                    <div class="clearfix"></div>
+                                  </div><!-- /.col-lg-4 -->
+                                  </div>
+                                </form>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card card-profile">
+                          <h4><b>So far you have spent</b></h4><br><br>
+                          <p style="font-size:400%;color:red">15%</p><br><br>
+                          <h4><b>of your weekly maximum budget</b></h4>
+                          
+          
+                      </div>
+                  </div>
+                  </div>
+                </div>
+            </div>

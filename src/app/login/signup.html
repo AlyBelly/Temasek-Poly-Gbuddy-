@@ -1,0 +1,109 @@
+<div class="full-page register-page" filter-color="black" ng-controller="loginController as loginCtr">
+  <div id="notifications">
+    <toaster-container></toaster-container>
+  </div>
+  <div class="container animated fadeInDown">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card card-signup">
+          <h2 class="card-title text-center">Register</h2>
+          <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+              <div class="card-content">
+                <div class="info info-horizontal">
+                  <div class="icon icon-rose">
+                    <i class="material-icons">timeline</i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Expenses Chart</h4>
+                    <p class="description">
+                      Keep track on your expenses through a chart and see how far are your from your monthly savings goal!
+                    </p>
+                  </div>
+                </div>
+                <div class="info info-horizontal">
+                  <div class="icon icon-primary">
+                    <i class="material-icons">code</i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Daily Assessment</h4>
+                    <p class="description">
+                        Do your daily assesment to earn points and be aware of what you have spent for the day!
+                    </p>
+                  </div>
+                </div>
+                <div class="info info-horizontal">
+                  <div class="icon icon-info">
+                    <i class="material-icons">group</i>
+                  </div>
+                  <div class="description">
+                    <h4 class="info-title">Be rewarded!</h4>
+                    <p class="description">
+                      Recieve travelling discounts/deals when you managed to achieve your monthly savings goal 8 times in a year or earn 25 points per month!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="social text-center">
+                <button class="btn btn-just-icon btn-round btn-twitter">
+                                  <i class="fa fa-twitter"></i>
+                              </button>
+                <button class="btn btn-just-icon btn-round btn-dribbble" ng-click="loginCtr.authenticate('google')">
+                                  <i class="fa fa-google-plus"></i>
+                              </button>
+                <button class="btn btn-just-icon btn-round btn-facebook" ng-click="loginCtr.authenticate('facebook')"> 
+                                  <i class="fa fa-facebook"> </i>
+                              </button>
+              </div>
+              <form class="form" method="" action="">
+                <div class="card-content">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">email</i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <input type="email" class="form-control" placeholder="Email..." ng-model="loginCtr.loginProfile.email">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">lock_outline</i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <input type="password" class="form-control" placeholder="Password..." ng-model="loginCtr.loginProfile.password">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">lock_outline</i>
+                    </span>
+                    <div class="form-group label-floating">
+                      <input type="password" class="form-control" placeholder="Comfirm Password..." ng-model="loginCtr.loginProfile.cpassword">
+                    </div>
+                  </div>
+                  <!-- If you want to add a checkbox to this form, uncomment this code -->
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="optionsCheckboxes"> I agree to the
+                        <a href="#something">terms and conditions</a>.
+                    </label>
+                  </div>
+                </div>
+                <div class="footer text-center">
+                  <button class="btn btn-primary btn-round" ng-click="loginCtr.email_signup()">Get Started</button>
+                  <button class="btn btn-warning btn-round" ng-if="loginCtr.verification_email_sent" ng-click="loginCtr.resend()">Resend Activation</button>
+                </div>
+                <div class="footer text-center">
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-page-background" style="background-image: url(../assets/images/homewallpaper.jpg) "></div>

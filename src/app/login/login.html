@@ -1,0 +1,175 @@
+<div class="row" ng-controller="loginController as loginCtr">
+  <div id="notifications">
+    <toaster-container></toaster-container>
+  </div>
+  <div class="page-header">
+    <h1></h1>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+         
+            <div class="ibox-content">
+                <form class="m-t" role="form" action="">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" required="" ng-model="loginCtr.loginProfile.email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" required="" ng-model="loginCtr.loginProfile.password">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">Login</button>                    
+
+                    <a href="#">
+                        <small>Forgot password?</small>
+                    </a>
+
+                    <p class="text-muted text-center">
+                        <small>Do not have an account?</small>
+                    </p>
+                    <a class="btn btn-sm btn-white btn-block" ng-click="loginCtr.email_signup()">Create an account</a>
+                    <a ng-show="loginCtr.verification_email_sent" class="btn btn-sm btn-info btn-block" ng-click="loginCtr.resend()">Resend verification token</a>
+                </form>
+                <p class="m-t">
+                    <small></small>
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+      <!--<form method="POST" action="." novalidate>
+        <input id="csrf_token" name="csrf_token" type="hidden" value="IjFhMjFkMmQ1ODBjMWM4ZDM0ZDdkMTIzOTljMWY0OTNhYWRmZmE4OTUi.DGriJg.Pqs69Y5xF-y5BwAn3DrF-wz2QAg">
+        <input id="next_url" name="next_url" type="hidden" value="http://localhost:3000/#/login/home">
+
+        <input class="hide" id="remember" name="remember" type="checkbox" value="y">
+        <div class="form-group ">
+          <label class="control-label" for="email">Email</label>
+
+          <input autofocus class="form-control input-lg" ng-model="$scope.email" type="email" value="">
+
+
+        </div>
+
+
+        <div class="form-group ">
+          <label class="control-label" for="password">Password</label>
+
+          <div class="input-group input-group-lg">
+            <input autocomplete="off" class="form-control" ng-model="$scope.password" type="password" value="">
+            <span class="input-group-btn">
+        <button class="btn btn-default btn-password-show" ng-click="$auth.login(user)"type="button" data-target="#password" data-toggle="button" title="Show/Hide Password" tabindex="-1">
+          <span class="fa fa-eye"></span>
+            </button>
+            </span>
+          </div>
+
+
+        </div>
+
+
+        <div class="controls">
+          <button ng-click="logout()" class="btn btn-block btn-lg btn-primary btn-loading">
+      log out
+    </button>
+
+          <button type="submit" class="btn btn-block btn-lg btn-primary btn-loading" data-loading-text="<span class='fa fa-spin fa-spinner'></span> Please wait..">
+      Sign in
+    </button>
+        </div>
+        <div class="form-group">
+          <div class="btn-group btn-group-justified form-control-static">
+            <a class="btn btn-link btn-xs ellipsis" href="/login/forgot.html">Forgot password?</a>
+            <a class="btn btn-link btn-xs ellipsis" href="#/register/registerP1.html">Create new account</a>
+          </div>
+        </div>
+      </form>-->
+
+
+
+      <legend class="text-muted text-center">or</legend>
+      <div class="text-center">
+        <a class="btn btn-lg btn-social-icon btn-google" ng-click="loginCtr.authenticate('google')"
+          title="Sign in with Google" rel="nofollow">
+    <span class="fa fa-google"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-facebook" ng-click="loginCtr.authenticate('facebook')"
+          title="Sign in with Facebook" rel="nofollow">
+    <span class="fa fa-facebook"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-twitter" href="/signin/twitter/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Twitter" rel="nofollow">
+    <span class="fa fa-twitter"></span>
+    
+  </a>
+
+
+        <a class="btn btn-lg btn-social-icon btn-bitbucket" href="/signin/bitbucket/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Bitbucket" rel="nofollow">
+    <span class="fa fa-bitbucket"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-dropbox" href="/signin/dropbox/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Dropbox" rel="nofollow">
+    <span class="fa fa-dropbox"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-github" ng-click="loginCtr.authenticate('github')" title="Sign in with GitHub" rel="nofollow">
+    <span class="fa fa-github"></span>
+    
+  </a>
+
+
+        <a class="btn btn-lg btn-social-icon btn-instagram" ng-click="loginCtr.authenticate('instagram')" title="Sign in with Instagram" rel="nofollow">
+    <span class="fa fa-instagram"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-linkedin" href="/signin/linkedin/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with LinkedIn" rel="nofollow">
+    <span class="fa fa-linkedin"></span>
+    
+  </a>
+
+
+        <a class="btn btn-lg btn-social-icon btn-microsoft" href="/signin/microsoft/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Microsoft" rel="nofollow">
+    <span class="fa fa-windows"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-reddit" href="/signin/reddit/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Reddit" rel="nofollow">
+    <span class="fa fa-reddit"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-vk" href="/signin/vk/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F" title="Sign in with VK"
+          rel="nofollow">
+    <span class="fa fa-vk"></span>
+    
+  </a>
+
+        <a class="btn btn-lg btn-social-icon btn-yahoo" href="/signin/yahoo/?next=https%3A%2F%2Fgae-init.appspot.com%2Fsignin%2F"
+          title="Sign in with Yahoo!" rel="nofollow">
+    <span class="fa fa-yahoo"></span>
+    
+  </a>
+
+      </div>
+      <hr>
+      <div class="checkbox remember">
+        <label><input type="checkbox" checked>Keep me signed in</label>
+      </div>
+    </div>
+  </div>
+</div>

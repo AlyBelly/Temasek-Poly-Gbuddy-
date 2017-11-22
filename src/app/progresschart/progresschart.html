@@ -1,0 +1,94 @@
+<head>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>       
+<style>
+#container {
+	min-width: 310px;
+	max-width: 1100px;
+	height: 500px;
+	margin: 0 auto
+}
+    </style>
+
+</head>
+
+<div class="main-content animated fadeInRight" ng-controller="profileController as pfCtr">
+    <div class="container-fluid">
+        <div class="row">
+            
+                    <div class="card">
+                <h2 class="card-title" align="center"><b>Take a look at your chart!</b>
+                </div>
+          
+                    <div class="row">
+                            <div id="container"></div>
+                    </div>
+
+            
+        </div>
+
+           
+
+    </div>
+
+    <script>
+Highcharts.chart('container', {
+    chart: {
+            backgroundColor: 'white',
+            type: 'line'
+        },
+    
+                    title: {
+                        text: 'Savings Progress Chart'
+                    },
+        
+                    subtitle: {
+                        text: '2-week program'
+                    },
+                    xAxis: {
+                        type: 'datetime'
+                    },
+                    
+                    yAxis: {
+                        title: {
+                            text: 'Amount Saved'
+                        }
+                    },
+    
+                    
+                            plotOptions: {
+                   series: {
+                     pointStart: Date.UTC(2017, 9, 2),
+                     pointInterval: 24 * 3600 * 1000,
+                     lineWidth: 5   
+                        }
+                    },
+    
+                       series: [{
+                        name: 'You',
+                        data: [2, 6, 6, 10, 14, 22, 23, 25]
+                    }, {
+                        name: 'target',
+                        data: [null, null, null, null, null, null, null, null, null, null, null, null, null, 84
+                        ]
+                    }],
+    
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+    
+    });
+    </script>
+</div>

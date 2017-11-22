@@ -1,0 +1,86 @@
+<div class="sidebar" data-active-color="white" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+
+    <sidebar-cmp>
+
+        <div class="logo">
+            <div class="logo-normal">
+                <a class="simple-text" href="">
+                    GBuddy
+                </a>
+            </div>
+            <div class="logo-img">
+                <img src="/assets/images/logo1.png" style="width:28%;top: 0px;left: 12px;">
+            </div>
+        </div>
+
+        <div class="sidebar-wrapper">
+
+            <!-- <div class="sidebar-collapse">
+                <ul side-navigation class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="photo">
+                            <center>
+                                <img src="../assets/img/faces/avatar.jpg" style="height:150px;width:150px; border-radius: 50%;">
+                            </center>
+                        </div>
+                    </li>
+
+                </ul>
+            </div> -->
+            <div class="user">
+                <div class="photo">
+                    <img src="{{$root.user_image}}">
+                </div>
+                <div class="info">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false">
+                            <span>
+                                {{$root.user_displayName}}
+                                
+                            </span>
+                        </a>
+                </div>
+            </div>
+            <div class="nav-container">
+                <ul side-navigation class="nav metismenu" id="side-menu">
+
+                    <li routerlinkactive="active" class="">
+                        <a href="#/profile/main">
+                        <i class="material-icons">home</i>
+                        <p  tyle= "color:white">Home</p>
+                    </a>
+                    </li>
+                    <li routerlinkactive="active" class="">
+                            <a href="#/instructions/main">
+                            <i class="material-icons">subject</i>
+                            <p  tyle= "color:white">Instructions</p>
+                        </a>
+                        </li>
+                    <li routerlinkactive="active" class="">
+                        <a href="#/daily/main">
+                                    <i class="material-icons">dashboard</i>
+                                    <p>Daily Assessment</p>
+                                </a>
+                    </li>       
+                    <li routerlinkactive="active" class="">
+                            <a href="#/progresschart/main">
+                                        <i class="material-icons">timeline</i>
+                                        <p>Chart</p>
+                                    </a>
+                        </li> 
+                    <li routerlinkactive="" ng-controller="LogOutController as logOutCtr">
+                        <a href="" ng-click="logOutCtr.logout()">
+                                    <i class="material-icons">lock</i>
+                                    <p>Logout</p>
+                                </a>
+                    </li>
+                </ul>
+                <div class="sidebar-moving-tab" style="transform: translate3d(0px, 65px, 0px); padding-left: 10px;">
+                    <span class="sidebar-mini">I</span>
+                    <span class="sidebar-normal">Icons</span>
+                </div>
+            </div>
+
+        </div>
+    </sidebar-cmp>
+    <div class="sidebar-background" style="background-image: url(assets/images/homewallpaper.jpg)"></div>
+</div>

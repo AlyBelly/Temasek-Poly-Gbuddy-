@@ -1,0 +1,60 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+                    <a uib-dropdown-toggle="" href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{main.userName}}</strong>
+                             </span>
+                                <span class="text-muted text-xs block">Example menu<b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated flipInX m-t-xs">
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="register.basic_info"><i class="fa fa-laptop"></i> <span class="nav-label">Start page</span> </a>
+            </li>
+
+            <li>
+                <a href=""><i class="fa fa-cubes"></i><span class="nav-label">RM</span>
+                <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li ui-sref-active="active"><a ui-sref="dashboard.RMdashboard">Dashboard</a></li>
+                    <li ui-sref-active="active"><a ui-sref="dashboard.CustomerMgt">Customer Mgt.</a></li>
+                </ul>
+            </li>
+            
+
+            <li ui-sref-active="active">
+                <a ui-sref="register.registerP1"><i class="fa fa-desktop"></i> <span class="nav-label">Register page</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="login.home"><i class="fa fa-desktop"></i> <span class="nav-label">login</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="riskprofile.home"><i class="fa fa-desktop"></i> <span class="nav-label">Risk Profile</span></a>
+            </li>
+            <li ui-sref-active="active">                
+                <a ui-sref="management.home"><i class="fa fa-desktop"></i> <span class="nav-label">User Management</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="financial_planning.home"><i class="fa fa-desktop"></i> <span class="nav-label">Financial Planning</span></a>
+            </li>
+            <!--SHOO Portfolio  -->
+            <li ui-sref-active="active">
+                <a ui-sref="portfolio.main"><i class="fa fa-desktop"></i> <span class="nav-label">Portfolio</span></a>
+        </ul>
+
+    </div>
+</nav>

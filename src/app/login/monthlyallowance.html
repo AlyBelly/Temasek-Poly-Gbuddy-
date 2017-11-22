@@ -1,0 +1,52 @@
+<div id="loginpage" class="full-page login-page" filter-color="black"  ng-controller="loginController as loginCtr">
+      <div id="notifications">
+    <toaster-container></toaster-container>
+  </div>
+    <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+    <div class="content animated fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                    <form method="#" action="#">
+                        <div class="card card-login">
+                            <div class="card-header text-center" data-background-color="rose">
+                                <h3 class="card-title">Just to get you started</h3>
+                            </div>
+
+                                <b><h4 class="card-title text-center">Total Monthly Income</h4></b>
+                                <p class="card-title text-center"><br>(this inlcudes allowance, salary etc)</p>
+                            <div class="card-content">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">attach_money</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                      <input type="number" class="form-control" ng-model="loginCtr.loginProfile.email">
+                                    </div>
+                                  </div>
+                            </div>
+                            <br>
+                            <b><h4 class="card-title text-center">Cost of your Graduation Trip</h4></b>
+                            <div class="card-content">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">attach_money</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                      <input type="number" class="form-control" ng-model="loginCtr.loginProfile.email">
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="footer text-center">
+                                <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg" ng-click="loginCtr.email_login()">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="full-page-background" style="background-image: url(../assets/images/homewallpaper.jpg) "></div>

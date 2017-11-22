@@ -1,0 +1,88 @@
+<head>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<div class = "main-content animated fadeInRight" ng-controller = "profileController as pfCtr">
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                                <h2 class="card-title"><b>Which chart would you like to view?</b><br><br>
+
+                                    <div style="text-align:center" class="row">
+                                            <div routerlinkactive="active" class="col-md-3">
+                                                    <a href="#/progresschart/main">
+                                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                                                                <br><p style="font-size:70%">Personal Saving Chart</p>
+                                                            </a>
+                                            </div><!-- /.col-lg-4 -->
+                                            <div routerlinkactive="active" class="col-md-3">
+                                                    <a href="#/pointchart/main">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                                                <br><p style="font-size:70%">Points Challenge Chart</p>
+                                              </div><!-- /.col-lg-4 -->
+                                        </div>
+
+
+                    </div>
+                    <div class="col-md-4">
+
+                  </div>
+                </div>
+            </div>
+            <script>
+              Highcharts.chart('container', {
+                
+                    title: {
+                        text: 'Savings Progress Chart'
+                    },
+                
+                    subtitle: {
+                        text: '2-week program'
+                    },
+                    xAxis: {
+                      type: 'datetime'
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Amount Saved'
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'middle'
+                    },
+                
+                    plotOptions: {
+                        series: {
+                          pointStart: Date.UTC(2017, 9, 2),
+                          pointInterval: 24 * 3600 * 1000
+                        }
+                    },
+                
+                    series: [{
+                        name: 'You',
+                        data: [2, 6, 6, 10, 14, 22, 23, 25]
+                    }, {
+                        name: 'target',
+                        data: [null, null, null, null, null, null, null, null,null, null,null,null,null,null,null,null,{ y: 150,marker: { fillColor: '#BF0B23', radius: 30 } }]
+                    }],
+                
+                    responsive: {
+                        rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
+                                legend: {
+                                    layout: 'horizontal',
+                                    align: 'center',
+                                    verticalAlign: 'bottom'
+                                }
+                            }
+                        }]
+                    }
+                
+                });
+        </script>
+          </div>

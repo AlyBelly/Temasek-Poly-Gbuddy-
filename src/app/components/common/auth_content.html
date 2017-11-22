@@ -1,0 +1,26 @@
+<!-- Wrapper-->
+<!-- <div id="wrapper"> -->
+<!-- Layout to top navigation -->
+
+<!-- Navigation -->
+<div ng-include="'app/components/common/top_navigation.html'"></div>
+
+<!-- Page wraper -->
+<!-- ng-class with current state name give you the ability to extended customization your view -->
+<div id="" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <!-- <div ng-include="'app/components/common/topnavbar.html'"></div>  -->
+    <!-- Layout to top navigation -->
+
+    <!-- Main view  -->
+    <div class="wrapper wrapper-full-page">
+        <div ui-view>
+
+        </div>
+    </div>
+
+
+
+</div>
+<!-- End page wrapper-->
