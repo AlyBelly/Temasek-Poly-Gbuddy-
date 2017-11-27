@@ -35,9 +35,6 @@
     }];
 
 
-    //----------------//
-    //  JH Portfolio  //
-    //----------------// 
     $stateProvider
       .state('login', {
         abstract: true,
@@ -94,48 +91,7 @@
           skipIfLoggedIn: skipIfLoggedIn
         }
       })
-      .state('login.options', {
-        url: "/options",
-        templateUrl: "app/login/options.html",
-        data: {
-          pageTitle: 'options view'
-        },
-        resolve: {
-          skipIfLoggedIn: skipIfLoggedIn
-        }
-      })
-      .state('login.monthlyallowance', {
-        url: "/monthlyallowance",
-        templateUrl: "app/login/monthlyallowance.html",
-        data: {
-          pageTitle: 'monthly allowance view'
-        },
-        resolve: {
-          skipIfLoggedIn: skipIfLoggedIn
-        }
-      })
-      .state('login.est_spending', {
-        url: "/est_spending",
-        templateUrl: "app/login/est_spending.html",
-        data: {
-          pageTitle: 'est_spending view'
-        },
-        resolve: {
-          skipIfLoggedIn: skipIfLoggedIn
-        }
-      })
 
-
-
-
-
-
-
-
-
-      //---------------------//
-      // Jia Zhe Profile //
-      //-------------------//  
 
       .state('profile', {
         abstract: true,
@@ -214,10 +170,6 @@
 
       })
 
-      //---------------------//
-      //  Jia Zhe Chatbox   //
-      //-------------------//
-
 
       .state('about', {
         abstract: true,
@@ -246,7 +198,54 @@
           pageTitle: 'homepage'
         },
 
+      })
+
+
+
+
+
+
+
+
+
+
+      //======================================== Onboard Flow
+      .state('onboard', {
+        abstract: true,
+        url: "/onboard",
+        templateUrl: "app/onboard_flow/content/onboard_flow.html"
+      })
+      .state('onboard.options', {
+        url: "/options",
+        templateUrl: "app/onboard_flow/options.html",
+        data: {
+          pageTitle: 'options view'
+        },
+        resolve: {
+          loginRequired: loginRequired
+        }
+      })
+      .state('onboard.monthlyallowance', {
+        url: "/monthlyallowance",
+        templateUrl: "app/onboard_flow/monthlyallowance.html",
+        data: {
+          pageTitle: 'monthly allowance view'
+        },
+        resolve: {
+          loginRequired: loginRequired
+        }
+      })
+      .state('onboard.est_spending', {
+        url: "/est_spending",
+        templateUrl: "app/onboard_flow/est_spending.html",
+        data: {
+          pageTitle: 'est_spending view'
+        },
+        resolve: {
+          loginRequired: loginRequired
+        }
       });
+      
 
 
 

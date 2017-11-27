@@ -1,0 +1,82 @@
+<div class="full-page register-page" filter-color="black" ng-controller="optionsController as optionsCtr">
+  <div id="notifications">
+    <toaster-container></toaster-container>
+  </div>
+  <div class="container animated fadeInDown">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card card-signup">
+          <h2 class="card-title text-center">Select 3 things you usually spend on:</h2>
+          <h6 class="card-title text-center">To select multiple images hold ctrl and click</h6>
+          <div class="row">
+
+            <form class="form" method="" action="">
+              <div class="card-content">
+
+                <style>
+                  .selectable .ui-selecting {
+                    border: 2px dashed #ff0000;
+                  }
+
+                  .selectable .ui-selected {
+                    border: 2px solid #ff0000;
+                    -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 0, 0, 1);
+                    -moz-box-shadow: 0px 0px 8px 0px rgba(255, 0, 0, 1);
+                    box-shadow: 0px 0px 8px 0px rgba(255, 0, 0, 1);
+                  }
+
+                  .selectable img {
+                    margin: 5px;
+                    padding: 5px;
+                    border: 2px solid #ffffff;
+                  }
+
+                  .selected-items {
+                    border: 2px solid #ff0000;
+                    line-height: 32px;
+                  }
+                </style>
+                <div class="selectable">
+                  <img style="width:18%; margin-left:10%" src="assets/images/cab.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:11%" src="assets/images/beauty.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:11%" src="assets/images/clothing.png" class="ui-widget-content" />
+                  <br>
+                  <img style="width:18%; margin-left:10%" src="assets/images/sport.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:11%" src="assets/images/food.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:11%" src="assets/images/book.png" class="ui-widget-content" />
+                  <br>
+                  <img style="width:18%; margin-left:10%" src="assets/images/cinema.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:11%" src="assets/images/tech.png" class="ui-widget-content" />
+                  <img style="width:18%; margin-left:10%; margin-top:3%" src="assets/images/tag.png" class="ui-widget-content" />
+                </div>
+                <script>
+                  $(function () {
+                    $(".selectable").selectable({
+                      selected: function () {
+                        var selectedItemList = $("#selected-item-list").empty();
+                        $(".selectable img").each(function (index) {
+                          if ($(this).hasClass("ui-selected")) {
+                            selectedItemList.append((index + 1) + ", ");
+                          }
+                        });
+                      }
+                    });
+                  });
+                </script>
+              </div>
+              <div class="footer text-center">
+                <button class="btn btn-primary btn-round" ng-click="optionsCtr.est_page()">Next</button>
+
+              </div>
+              <div class="footer text-center">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="full-page-background" style="background-image: url(../assets/images/homewallpaper.jpg) "></div>

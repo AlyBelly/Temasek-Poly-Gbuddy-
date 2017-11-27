@@ -32,7 +32,7 @@ angular.module('Gbuddy')
           $rootScope.user_id = vm.temp.sub;
           userService.set_user(user[0]);
         })
-        $location.path('/profile/main');
+        $location.path('/onboard/options');
       });
     };
 
@@ -46,7 +46,7 @@ angular.module('Gbuddy')
       $auth.login(v_loginProfile).then(function (response) {
         console.log("authenticate response", response)        
         toaster.pop('success', '', 'You have successfully signed in with email!');
-        $location.path('/profile/main');
+        $location.path('/onboard/options');
       })
       .catch(function(error) {
           toaster.error(error.data.message, error.status);
